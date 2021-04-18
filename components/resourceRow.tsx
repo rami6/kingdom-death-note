@@ -1,6 +1,8 @@
 import { Table, Icon, Button } from 'semantic-ui-react';
 import { Resource } from '../common/types';
 import { includes } from 'lodash';
+import styles from '../styles/ResourceRow.module.scss';
+
 
 interface ResourceRowProp {
   resource: Resource;
@@ -26,11 +28,11 @@ export default function ResourceRow({ resource }: ResourceRowProp) {
       <Table.Cell>{resource.amount}</Table.Cell>
       <Table.Cell>{resource.amountToBeConsumed}</Table.Cell>
       <Table.Cell>
-        <Button primary>
-          <Icon name="plus" style={{ margin: 0 }} />
+        <Button primary className={styles.actionButton}>
+          <Icon name="plus" className={styles.actionButtonIcon} />
         </Button>
         <Button secondary>
-          <Icon name="minus" style={{ margin: 0 }} />
+          <Icon name="minus" />
         </Button>
       </Table.Cell>
     </Table.Row>

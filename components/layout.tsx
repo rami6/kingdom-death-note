@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Layout.module.scss';
 
 export default function Layout({ children, pageTitle = 'Default Page Title' }) {
   return (
@@ -9,7 +9,7 @@ export default function Layout({ children, pageTitle = 'Default Page Title' }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <h2 style={{ marginTop: 30 }}>{pageTitle}</h2>
+        <h2 className={styles.pageTitle}>{pageTitle}</h2>
       </header>
       <main className={styles.main}>{children}</main>
     </div>
