@@ -9,7 +9,7 @@ export default function Layout({ children, pageTitle = 'Default Page Title' }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <h2>{pageTitle}</h2>
+        <h2 style={{ marginTop: 30 }}>{pageTitle}</h2>
       </header>
       <main className={styles.main}>{children}</main>
     </div>
