@@ -9,7 +9,6 @@ const resources: Resource[] = [
     isConsumable: false,
     isCatRes: false,
     amount: 3,
-    amountToBeConsumed: 0,
   },
   {
     name: 'Cat Bone',
@@ -17,7 +16,6 @@ const resources: Resource[] = [
     isConsumable: false,
     isCatRes: true,
     amount: 1,
-    amountToBeConsumed: 0,
   },
   {
     name: 'Monster Hide',
@@ -25,7 +23,6 @@ const resources: Resource[] = [
     isConsumable: false,
     isCatRes: false,
     amount: 1,
-    amountToBeConsumed: 0,
   },
   {
     name: '???',
@@ -33,7 +30,6 @@ const resources: Resource[] = [
     isConsumable: false,
     isCatRes: false,
     amount: 1,
-    amountToBeConsumed: 0,
   },
   {
     name: 'Love Juice',
@@ -41,7 +37,6 @@ const resources: Resource[] = [
     isConsumable: true,
     isCatRes: false,
     amount: 1,
-    amountToBeConsumed: 0,
   },
 ];
 

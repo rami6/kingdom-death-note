@@ -5,13 +5,18 @@ import styles from '../styles/ResourceRow.module.scss';
 
 
 interface ResourceRowProp {
-  resource: Resource;
+  resource: ResourceRow;
+}
+
+interface ResourceRow extends Resource {
+  barance: number;
+  difference: number;
 }
 
 export default function ResourceRow({ resource }: ResourceRowProp) {
   return (
-    <Table.Row>
-      <Table.Cell>{resource.name}</Table.Cell>
+    <Table.Row textAlign={'center'}>
+      <Table.Cell textAlign={'left'}>{resource.name}</Table.Cell>
       <Table.Cell>
         {includes(resource.attributes, 'Bone') ? <Icon name="checkmark" /> : ''}
       </Table.Cell>
@@ -25,16 +30,16 @@ export default function ResourceRow({ resource }: ResourceRowProp) {
       <Table.Cell>
         {includes(resource.attributes, 'Hide') ? <Icon name="checkmark" /> : ''}
       </Table.Cell>
-      <Table.Cell>{resource.amount}</Table.Cell>
-      <Table.Cell>{resource.amountToBeConsumed}</Table.Cell>
       <Table.Cell>
         <Button primary className={styles.actionButton}>
           <Icon name="plus" className={styles.actionButtonIcon} />
         </Button>
+        <span>{resource.barance}</span>
         <Button secondary>
           <Icon name="minus" />
         </Button>
       </Table.Cell>
+      <Table.Cell>{resource.difference}</Table.Cell>
     </Table.Row>
   );
 }

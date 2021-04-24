@@ -8,28 +8,30 @@ interface ResourceTableProp {
 }
 
 export default function ResourceTable({ resourceByName }: ResourceTableProp) {
-  const resourceRows = map(resourceByName, res => {
+  const resourceRows = map(resourceByName, (res) => {
     return (
-      <ResourceRow resource={res}></ResourceRow>
-    )
+      <ResourceRow
+        resource={{ ...res, barance: res.amount, difference: 0 }}
+      ></ResourceRow>
+    );
   });
 
   return (
-    <Table striped>
+    <Table celled striped structured>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>Name</Table.HeaderCell>
+          <Table.HeaderCell rowSpan='2'>Name</Table.HeaderCell>
+          <Table.HeaderCell colSpan='3'>Attributes</Table.HeaderCell>
+          <Table.HeaderCell rowSpan='2'>Action</Table.HeaderCell>
+          <Table.HeaderCell rowSpan='2'>Diff</Table.HeaderCell>
+        </Table.Row>
+        <Table.Row>
           <Table.HeaderCell>Bone</Table.HeaderCell>
           <Table.HeaderCell>Organ</Table.HeaderCell>
           <Table.HeaderCell>Hide</Table.HeaderCell>
-          <Table.HeaderCell>Amount</Table.HeaderCell>
-          <Table.HeaderCell>Amount to be consumed</Table.HeaderCell>
-          <Table.HeaderCell>Action</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
-      <Table.Body>
-        {resourceRows}
-      </Table.Body>
+      <Table.Body>{resourceRows}</Table.Body>
     </Table>
   );
 }

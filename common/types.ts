@@ -8,5 +8,4 @@ export interface Resource {
   isConsumable: boolean;
   isCatRes: boolean;
   amount: number;
-  amountToBeConsumed: number;
 }
