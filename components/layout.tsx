@@ -6,11 +6,13 @@ export default function Layout({ children, pageTitle = 'Default Page Title' }) {
     <div className={styles.container}>
       <Head>
         <title>Kingdom Death Note</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel='icon' href='/favicon.ico' />
       </Head>
-      <header>
-        <h2 className={styles.pageTitle}>{pageTitle}</h2>
-      </header>
+
+      <div className={styles.pageTitle}>
+        <h2>{pageTitle}</h2>
+      </div>
+
       <main className={styles.main}>{children}</main>
     </div>
   );

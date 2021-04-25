@@ -8,10 +8,11 @@ interface ResourceTableProp {
 }
 
 export default function ResourceTable({ resourceByName }: ResourceTableProp) {
-  const resourceRows = map(resourceByName, (res) => {
+  const resourceRows = map(resourceByName, (res, i) => {
     return (
       <ResourceRow
-        resource={{ ...res, balance: res.amount, difference: 0 }}
+        resource={res}
+        key={i}
       ></ResourceRow>
     );
   });
