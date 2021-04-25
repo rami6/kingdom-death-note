@@ -13,7 +13,7 @@ const resources: Resource[] = [
   {
     name: 'Cat Bone',
     attributes: ['Bone'],
-    isConsumable: false,
+    isConsumable: true,
     isCatRes: true,
     amount: 1,
   },
