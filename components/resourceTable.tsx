@@ -11,7 +11,7 @@ export default function ResourceTable({ resourceByName }: ResourceTableProp) {
   const resourceRows = map(resourceByName, (res) => {
     return (
       <ResourceRow
-        resource={{ ...res, barance: res.amount, difference: 0 }}
+        resource={{ ...res, balance: res.amount, difference: 0 }}
       ></ResourceRow>
     );
   });

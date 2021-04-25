@@ -9,7 +9,7 @@ interface ResourceRowProp {
 }
 
 interface ResourceRow extends Resource {
-  barance: number;
+  balance: number;
   difference: number;
 }
 
@@ -35,13 +35,13 @@ export default function ResourceRow({ resource }: ResourceRowProp) {
         {resource.isConsumable ? <Icon name='food' /> : ''}
       </Table.Cell>
       <Table.Cell>
-        <Button primary className={styles.actionButton}>
-          <Icon name='plus' className={styles.actionButtonIcon} />
-        </Button>
-        <span>{resource.barance}</span>
-        <Button secondary>
-          <Icon name='minus' />
-        </Button>
+        <button className='ui icon button action-button'>
+          <i aria-hidden='true' className='plus icon'></i>
+        </button>
+        <span className={styles.balance}>{resource.balance}</span>
+        <button className='ui icon button action-button'>
+          <i aria-hidden='true' className='minus icon'></i>
+        </button>
       </Table.Cell>
       <Table.Cell>{resource.difference}</Table.Cell>
     </Table.Row>
