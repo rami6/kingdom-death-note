@@ -32,17 +32,17 @@ export default function ResourceRow({ resource }: ResourceRowProp) {
     <Table.Row textAlign='center'>
       <Table.Cell textAlign='left'>{resource.name}</Table.Cell>
       <Table.Cell>
-        {includes(resource.attributes, 'Bone') ? <Icon name='checkmark' /> : ''}
+        {includes(resource.basicAttributes, 'Bone') ? <Icon name='checkmark' /> : ''}
       </Table.Cell>
       <Table.Cell>
-        {includes(resource.attributes, 'Organ') ? (
+        {includes(resource.basicAttributes, 'Organ') ? (
           <Icon name='checkmark' />
         ) : (
           ''
         )}
       </Table.Cell>
       <Table.Cell>
-        {includes(resource.attributes, 'Hide') ? <Icon name='checkmark' /> : ''}
+        {includes(resource.basicAttributes, 'Hide') ? <Icon name='checkmark' /> : ''}
       </Table.Cell>
       <Table.Cell>
         {resource.isCatRes ? <Icon name='github alternate' /> : ''}

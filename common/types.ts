@@ -4,7 +4,7 @@ export interface Dictionary<T> {
 
 export interface Resource {
   name: string;
-  attributes: ('Bone' | 'Organ' | 'Hide')[];
+  basicAttributes: ('Bone' | 'Organ' | 'Hide')[];
   isConsumable: boolean;
   isCatRes: boolean;
   amount: number;
