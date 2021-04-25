@@ -1,7 +1,11 @@
 .legend {
-  align-self: flex-end;
+  align-self: flex-start;
 
   span {
-    margin-left: 1em;
+    margin-right: 1em;
   }
+}
+
+.rightButtons {
+  align-self: flex-end;
 }
