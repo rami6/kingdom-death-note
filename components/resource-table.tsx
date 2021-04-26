@@ -1,6 +1,6 @@
 import { Table } from 'semantic-ui-react';
 import { Dictionary, Resource } from '../common/types';
-import ResourceRow from './resourceRow';
+import ResourceRow from './resource-row';
 import { map } from 'lodash';
 
 interface ResourceTableProp {

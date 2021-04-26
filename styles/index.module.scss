@@ -6,6 +6,8 @@
   }
 }
 
-.rightButtons {
-  align-self: flex-end;
+.topButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

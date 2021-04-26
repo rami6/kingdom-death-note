@@ -1,7 +1,7 @@
 import { Table, Icon, Button } from 'semantic-ui-react';
 import { Resource } from '../common/types';
 import { includes } from 'lodash';
-import styles from '../styles/ResourceRow.module.scss';
+import styles from '../styles/resource-row.module.scss';
 import { useState } from 'react';
 
 interface ResourceRowProp {
