@@ -6,7 +6,7 @@ import styles from '../styles/add-resource-modal.module.scss';
 export default function AddResourceModal() {
   const [open, setOpen] = React.useState(false);
 
-  const resInfoFieldSet = (i: number) => (
+  const resourceFieldSet = (i: number) => (
     <div key={i} className={styles.resourceFieldSet}>
       <Form.Input placeholder='Resource Name' width='16' />
       <Form.Group inline widths='16'>
@@ -19,9 +19,9 @@ export default function AddResourceModal() {
     </div>
   );
 
-  const [resInfoFieldSets, setResInfoFieldSets] = React.useState([resInfoFieldSet(0)]);
+  const [resourceFieldSets, setResourceFieldSets] = React.useState([resourceFieldSet(0)]);
 
-  const addFieldSet = () => setResInfoFieldSets((prevState) => [...prevState, resInfoFieldSet(prevState.length)]);
+  const addFieldSet = () => setResourceFieldSets((prevState) => [...prevState, resourceFieldSet(prevState.length)]);
 
   return (
     <Modal
@@ -33,7 +33,7 @@ export default function AddResourceModal() {
     >
       <Modal.Header>Add new resources</Modal.Header>
       <Modal.Content>
-        <Form>{resInfoFieldSets}</Form>
+        <Form>{resourceFieldSets}</Form>
         <Button onClick={addFieldSet}>Add Fields</Button>
       </Modal.Content>
       <Modal.Actions>

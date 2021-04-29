@@ -29,10 +29,10 @@ export default function Home({ resourceByName }) {
       <ResourceTable resourceByName={resourceByName} />
       <div className={styles.legend}>
         <span>
-          <Icon name='food' />: Consumable
+          <Icon name='github alternate' />: Cat resource
         </span>
         <span>
-          <Icon name='github alternate' />: Cat resource
+          <Icon name='food' />: Consumable
         </span>
       </div>
     </Layout>
