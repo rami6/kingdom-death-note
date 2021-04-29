@@ -11,16 +11,21 @@ generator client {
 }
 
 model Resource {
-  id Int @id @default(autoincrement())
-  name String @unique
-  basicAttributes BasicAttribute[]
-  isConsumable Boolean
-  isCatRes Boolean
-  amount Int
+  id              Int              @id @default(autoincrement())
+  name            String           @unique
+  basicAttributes BasicAttribute[] @map("basic_attributes")
+  isConsumable    Boolean @map("is_consumable")
+  isCatRes        Boolean @map("is_cat_res")
+  amount          Int
+  updatedAt       DateTime         @updatedAt @map("updated_at")
+
+  @@map("resources")
 }
 
 enum BasicAttribute {
-  BONE
-  ORGAN
-  HIDE
+  BONE   @map("bone")
+  ORGAN  @map("organ")
+  HIDE   @map("hide")
+
+  @@map("basic_attribute")
 }

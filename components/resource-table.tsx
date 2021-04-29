@@ -23,7 +23,7 @@ export default function ResourceTable({ resourceByName }: ResourceTableProp) {
         <Table.Row>
           <Table.HeaderCell rowSpan='2'>Name</Table.HeaderCell>
           <Table.HeaderCell colSpan='4'>Attributes</Table.HeaderCell>
-          <Table.HeaderCell rowSpan='2'>Action</Table.HeaderCell>
+          <Table.HeaderCell rowSpan='2'>Amount</Table.HeaderCell>
           <Table.HeaderCell rowSpan='2'>Diff</Table.HeaderCell>
         </Table.Row>
         <Table.Row>
