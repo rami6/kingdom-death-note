@@ -1,5 +1,7 @@
-import { join } from 'path';
+const path = require('path');
 
-export const sassOptions = {
-  includePaths: [join(__dirname, 'styles')],
+module.exports = {
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
 };
