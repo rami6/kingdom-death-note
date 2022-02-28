@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kingdom Death Note
 
-## Getting Started
+This is a project to make experiences of a board game ["Kingdom Death: Monster"](https://shop.kingdomdeath.com/collections/in-stock/products/kingdom-death-monster-1-5) play better.
 
-First, run the development server:
+## Problems to be solved
+The game goes with a story and requires a long play time. Record sheets are provided to keep track of a lot of information - this is the hardest part. Since the information changes as we play, we needed to write and erase with pencils and erasers repeatedly. After a while, we started to use Excel sheet while sharing it on a TV. However, this solution still had a problem:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Each player cannot update their own information individually because there is an only device for that, which is a laptop sharing its screen on the TV.
+- The way of updating information is still "write and erase". The interface is not user friendly.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This application's goal is to allow each player to update their own information via friendly UI using either a laptop or a phone.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Tech stack
+- React
+- Next.js
+- Sass
+- Prisma
+- PostgreSQL
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Resource Tracker (WIP)
 
-## Learn More
+- When a player gains/loses a resource, click on "+"/"-" button in the resource's row. Database is updated by clicking on "Confirm" button. Before doing that, the player can make use of "Diff" column to ensure the update to be committed is correct.  
+    <img width="844" alt="image" src="https://user-images.githubusercontent.com/30137645/155921841-2510c09a-22d1-4ac8-8807-13a9fdcb6d4e.png">
 
-To learn more about Next.js, take a look at the following resources:
+- When a player gains a resource that is not on the table, click on the yellow "+" button on the top-left of the table. A dialog shows up to register a new resource. "Add Fields" button generates another set of a text field and checkboxes so multiple resources can be registered at once.  
+  
+    <img width="768" alt="image" src="https://user-images.githubusercontent.com/30137645/155922020-82a652ff-6a2e-45e7-9078-7535a1c82129.png">  
+      
+    Potential enhancement: Store all the resource information in database, then allow players to search and add to their table.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Road map
+Add features for information other than resources.  
+However, unfortunately I and my friends have not played this board game for a while and I do not own it... it's my friend's. Whether this project continues to be developed is depending on whether we start playing it again or not😜 I enjoyed the development though!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## How to run
+1. Install dependencies.
+    ```bash
+    yarn install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Run the development server.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    yarn dev
+    ```
+
+1. Open [http://localhost:3000](http://localhost:3000) with your browser.
+
